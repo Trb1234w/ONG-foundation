@@ -1,0 +1,797 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: orange;
+}
+/* AppBar design */
+.appbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5%;
+}
+
+.logoandnavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.firsttitle span{
+    color: orange;
+}
+.navbar{
+    margin-left: 5px;
+}
+.navbar a{
+    color: black;
+    margin-left: 15px;
+}
+.navbar a:hover{
+    color: orange;
+}
+.contact{
+    width: 18%;
+    margin-right: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+.contact a{
+    text-decoration: none;
+    color: white;
+}
+.contact button{
+    margin-right: 5%;
+    padding: 4%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+}
+.contact button:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+.contact button::before{
+    filter: blur(1.0rem);
+    opacity: 0.5;
+}
+/* Fin du design de l'AppBar design */
+
+/* Debut de la section accueil */
+.accueil{
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: hidden;
+}
+.accueil .left-section{
+    margin: 1.5%;
+}
+.left-section img{
+    margin: 1.5%;
+    width: 100%;
+    height: 320px;
+}
+.right-section{
+    margin: 1.5%;
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+.right-section .i{
+    position: absolute;
+    left: 100px;
+    top: 2px;
+    padding: 5px;
+    background-color: orange;
+}
+.right-section h1,.right-section p{
+    margin-bottom: 15px;
+}
+.right-section span{
+    color: orange;
+}
+.right-section button{
+    padding: 10px;
+    background: black;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    color: white;
+    border: 1px solid orange;
+    font-size: 20px;
+}
+/* Fin du design de la seconde accueil*/
+
+/* Entete generale */
+.entete{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entete p{
+    text-align: center;
+}
+.entete h3{
+    text-align: center; 
+}
+.entete h4{
+    color: orange;
+    text-align: center;
+}
+.entete .projects-missions-sections{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+/* Fin de la section entete */
+
+/* Debut de la section missions */
+.missions .container{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px;
+}
+.missions .container img{
+    height: 100px;
+    width: 100px;
+}
+.missions .container p{
+    text-align: center;
+}
+/* Fin du design de la section missions */
+
+/* Debut du design de la section a propos de nous*/
+.aproposdenous{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aproposdenous .left-section {
+    width: 50%;
+    height: auto;
+}
+.aproposdenous .left-section img{
+    width: 70%;
+    height: auto;
+}
+.aproposdenous .right-section h3{
+    color: orange;
+    margin-bottom: 10px;
+}
+.aproposdenous .right-section h4{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.aproposdenous .right-section p{
+    margin-bottom: 10px;
+}
+.aproposdenous .right-section button{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-color: orange;
+}
+/* Fin du design de la section a propos de nous */
+
+/* Debut de la section projects */
+.projects #container{
+    width: 30%;
+    height: auto;
+    margin: 5px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.projects #container img{
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 20px;
+}
+.projects #container h3{
+    color: black;
+    text-align: start;
+    margin: 5px;
+}
+.projects #container p{
+    margin: 5px;
+    text-align: start;
+}
+.projects .equart{
+    height: 30px;
+}
+.projects #container button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    border: none;
+    background-color: orange;
+    color: white; 
+    border-top-left-radius: 25px;
+    font-size: 20px;
+}
+.projects #container .static{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.projects .static span{
+    color: grey;
+    font-weight: 200;
+    text-align: center;
+}
+.projects .static h3{
+    text-align: center;
+}
+/* Fin du design de la section projects */
+
+/* Debut du design de la section statistiques */
+.statistcs-desc{
+    display: flex;
+    width: 90%;
+    position: relative;
+}
+.statistcs-desc .right-section{
+    margin: 20px;
+    width: 70%;
+    height: 100%;
+    background-color: orange;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius: 5px;
+}
+.statistcs-desc .right-section p{
+    text-align: start;
+    color: white;
+}
+.statistcs-desc .right-section h1{
+    margin-bottom: 10px;
+    color: white;
+}
+.statistcs-desc .left-section{
+    position: absolute;
+    background-color: white;
+    width: 30%;
+    height: 70%;
+    right: 4%;
+    bottom: 45px;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    background-color: black;
+    color: white;
+    border:1px solid orange;
+}
+/* Fin du design de la section statistiques */
+
+/* Statistiques images */
+.children-images h3{
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px orange;
+}
+.Gravity-container {
+    perspective: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.seccontainer {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: rotate 15s linear infinite;
+}
+
+.seccontainer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(300px); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.seccontainer span img {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 4px solid #fff; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.seccontainer span img:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.7); 
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+/* Fin de la section Statistiques images */
+
+/* Debut de la section formulaire de don */
+.formulaire{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formulaire .formular{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formular form{
+    width: 300px;
+    padding: 10px;
+}
+.formular input{
+    margin: 10px;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+input::placeholder{
+    color: white;
+}
+.formular .reglement{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    margin-top: 20px;
+}
+.formular .reglement img{
+    margin-bottom: 30px;
+}
+.formular .reglement h3{
+    color: black;
+    margin-bottom: 30px;
+}
+.coordonnees{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+}
+.coordonnees h2{
+    margin: 20px;
+    text-align: center;
+    color: orange;
+    text-decoration: underline;
+}
+.coordonnees .parentelement{
+    display: flex;
+    justify-content: space-between;
+}
+.coordonnees .parentelement button{
+    border-radius: 10px; 
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+}
+.coordonnees .montantlibre{
+    margin-top: 10px;
+    margin-left: 5%;
+    padding: 10px;
+    width: 90%;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.coordonnees .parentelement .orange{
+    background-color: orange;
+}
+.reglement div{
+    display: flex;
+}
+.reglement .left{
+    top: 0;
+    position: absolute;
+    left: 0;
+}
+.reglement .right{
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+.reglement .top{
+    margin-top: 50px;
+}
+.reglement button{
+    padding: 20px;
+    background: orange;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+.television{
+    margin: 20px;
+    margin-left: 20px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.television .ecran{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    animation: toggleimages 20s linear infinite;
+    border-radius: 15px;
+    border: 7px solid orange;
+}
+@keyframes toggleimages {
+    0% {
+        background-image: url(../images/animg\ \(1\).jpg);
+    }
+    5% {
+        background-image: url(../images/animg\ \(2\).jpg);
+    }
+    10% {
+        background-image: url(../images/animg\ \(3\).jpg);
+    }
+    15% {
+        background-image: url(../images/animg\ \(4\).jpg);
+    }
+    20% {
+        background-image: url(../images/animg\ \(5\).jpg);
+    }
+    25% {
+        background-image: url(../images/animg\ \(6\).jpg);
+    }
+    30% {
+        background-image: url(../images/animg\ \(7\).jpg);
+    }
+    35% {
+        background-image: url(../images/animg\ \(8\).jpg);
+    }
+    40% {
+        background-image: url(../images/animg\ \(9\).jpg);
+    }
+    45% {
+        background-image: url(../images/animg\ \(10\).jpg);
+    }
+    50% {
+        background-image: url(../images/animg\ \(11\).jpg);
+    }
+    55% {
+        background-image: url(../images/animg\ \(12\).jpg);
+    }
+    60% {
+        background-image: url(../images/animg\ \(13\).jpg);
+    }
+    65% {
+        background-image: url(../images/animg\ \(14\).jpg);
+    }
+    70% {
+        background-image: url(../images/animg\ \(15\).jpg);
+    }
+    75% {
+        background-image: url(../images/animg\ \(16\).jpg);
+    }
+    80% {
+        background-image: url(../images/animg\ \(17\).jpg);
+    }
+    85% {
+        background-image: url(../images/animg\ \(18\).jpg);
+    }
+    90% {
+        background-image: url(../images/animg\ \(19\).jpg);
+    }
+    95% {
+        background-image: url(../images/animg\ \(20\).jpg);
+    }
+    100% {
+        background-image: url(../images/animg\ \(21\).jpg);
+    }
+}
+.television .secondline{
+    height: 20px;
+    width: 40%;
+    color: orange;
+    background-color: orange;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.television .firstline{
+    height: 15px;
+    width: 2px;
+    background-color: orange;
+}
+/* Fin de la section formulaire de don */
+
+/* Debut de la section footer */
+.footer{
+    margin: 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.footer .firstsection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .firstsection p{
+    text-align: start;
+}
+.footer .firstsection div{
+    display: flex;
+    flex-direction: column;
+}
+.footer .firstsection h2{
+    color: orange;
+}
+.footer .firstsection h4{
+    color:orange;
+    margin-bottom: 3%;
+    text-align: start;
+}
+.footer .firstsection a{
+    color: white;
+    margin-bottom: 3%;
+}
+.footer .firstsection a:hover{
+    color: orange;
+}
+.footer .second-party{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.footer .second-party *{
+    margin-left: -6px;
+    margin-right: 10px;
+}
+.footer .second-party div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .second-party h4{
+    color: white;
+}
+.end{
+    margin: 5px;
+    color: orange;
+}
+/* Fin de la section footer */
+/* Fin du design de la troisieme section*/
+
+/* responsivite de l'application */
+@media screen and (max-width: 1020px){
+    .statistcs-desc {
+        flex-direction: column;
+        align-items: center;
+    }
+    .statistcs-desc .left-section{
+        position: inherit;
+        border-radius: 10px;
+        width: 80%;
+        left: 0.5%;
+    }
+    .formulaire{
+        flex-direction: column;
+        margin: 0px;
+        width: 90%;
+    }
+    .coordonnees{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .appbar{
+        align-items: start;
+        margin: 10px;
+    }
+    .logo{
+        margin: 3px;
+    }
+    .logoandnavbar{
+        flex-direction: column;
+        align-items: start;
+        margin: 0px;
+    }
+    .navbar{
+        margin-left: 0px;
+    }
+    .navbar a{
+        margin: 3px;
+    }
+    .contact{
+        margin: 3px;
+        width: 25%;
+    }
+    .missions .projects-missions-sections{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .projects .projects-missions-sections{
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 10px;
+    }
+    .projects #container{
+        width: 40%;
+        margin: 5px;
+    }
+    .statistcs-desc {
+        flex-direction: column;
+        align-items: center;
+    }
+    .statistcs-desc .left-section{
+        position: inherit;
+        border-radius: 10px;
+        width: 80%;
+        left: 0.5%;
+    }
+    .formulaire{
+        flex-direction: column;
+    }
+    .television{
+        width: 70%;
+    }
+    .footer .firstsection{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .footer .firstsection *{
+        margin: 5px;
+    }
+    .footer .second-party{
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+    }
+    .footer .second-party *{
+        margin: 4px;
+    }
+    .footer .second-party h4{
+        color: white;
+    }
+}
+@media screen and (max-width: 480px){
+    .appbar{
+        flex-direction: column;
+        position: relative;
+    }
+    .appbar *{
+        margin: 6px;
+    }
+    .contact{
+        position: absolute;
+        right: 2px;
+        margin-right: 0.5%;
+        margin-top: 4px;
+        width: 50%;
+        justify-content: space-between;
+    }
+    .accueil{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .accueil .left-section{
+        width: 100%;
+    }
+    .accueil .right-section{
+        width: 100%;
+    }
+    .accueil br{
+        display: none;
+    }
+    .projects #container{
+        width: 85%;
+        margin: 5px;
+    }
+    .projects #container img{
+       height: 200px;
+    }
+    .aproposdenous{
+        flex-direction: column-reverse;
+        margin: 0px;
+    }
+    .aproposdenous .left-section {
+        width: 100%;
+        height: auto;
+    }
+    .aproposdenous .left-section img{
+        width: 90%;
+        height: auto;
+    }
+    .aproposdenous .right-section{
+        width: 90%;
+    }
+    .aproposdenous .right-section h3{
+        text-align: center;
+    }
+    .aproposdenous .right-section br{
+        display: none;
+    }
+    .formular{
+        flex-direction: column;
+    }
+    .forme{
+        margin-left: 15%;
+    }
+    .television{
+        width: 95%;
+    }
+    .end h1{
+        font-size: 20px;
+    }
+}
